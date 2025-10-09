@@ -9,6 +9,7 @@
 
 void CreateLedTask()
 {
+	/* EJERCICIOS 1/2/3
 	LED_Config* cfg = pvPortMalloc(sizeof(LED_Config));
 
 	if (cfg != NULL)
@@ -23,6 +24,42 @@ void CreateLedTask()
 		128,
 		(void*) cfg,
 		1,
+		NULL
+	);
+	*/
+
+	/* EJERCICIO 4
+	xTaskCreate(
+		LedAnimationTask,
+		"LedAnimationTask",
+		128,
+		NULL,
+		1,
+		NULL
+	);
+	*/
+
+	/* EJERCICIO 5
+	 * - con la misma prioridad alternan continuamente entre ellas y son animaciones
+	 *   sin sentido
+	 * - con prioridades distintas, visualmente y con un delay un poco más alto
+	 *   podría parecer que se hacen una detrás de otra (en orden de prioridad)
+	 */
+	xTaskCreate(
+		LedAnimationTask1,
+		"LedAnimationTask1",
+		128,
+		NULL,
+		1,
+		NULL
+	);
+
+	xTaskCreate(
+		LedAnimationTask2,
+		"LedAnimationTask2",
+		128,
+		NULL,
+		2,
 		NULL
 	);
 }
@@ -57,5 +94,89 @@ void LedToggleTask(void* pArgs)
 		);
 
 		vTaskDelete(NULL);
+	}
+}
+
+void LedAnimationTask(void* pArgs)
+{
+	for(;;)
+	{
+		switch(ReadJoy())
+		{
+		case 0:
+			// stand-by
+			LED_Off(0);
+			LED_Off(1);
+			LED_Off(2);
+			break;
+		case 1:
+			animation1();
+			break;
+		case 2:
+			animation2();
+			break;
+		case 3:
+			animation3();
+			break;
+		}
+		vTaskDelay(50);
+	}
+}
+
+void LedAnimationTask1(void* pArgs)
+{
+	for(;;)
+	{
+		int i;
+		for(i = 0; i < 3; i++)
+		{
+			LED_On(i);
+			vTaskDelay(150);
+			LED_Off(i);
+		}
+		for(i = 1; i > 0; i--)
+		{
+			LED_On(i);
+			vTaskDelay(150);
+			LED_Off(i);
+		}
+	}
+}
+
+void LedAnimationTask2(void* pArgs)
+{
+	for(;;)
+	{
+		int i, j;
+		for(j = 0; j < 5; j++)
+		{
+			for(i = 0; i < 3; i++)
+				LED_On(i);
+
+			vTaskDelay(100);
+
+			for(i = 0; i < 3; i++)
+				LED_Off(i);
+
+			vTaskDelay(100);
+		}
+	}
+}
+
+void LedAnimationTask3(void* pArgs)
+{
+	for(;;)
+	{
+		int i;
+		for(i = 0; i < 3; i++)
+		{
+			LED_On(i);
+			vTaskDelay(150);
+		}
+		for(i = 2; i >= 0; i--)
+		{
+			LED_Off(i);
+			vTaskDelay(150);
+		}
 	}
 }
