@@ -21,11 +21,8 @@ typedef struct
 } LED_Config;
 
 void CreateLedTask();
-void LedToggleTask(void* pArgs);
-
-void LedAnimationTask(void* pArgs);
+void ButtonTask(void* pArgs);
 void LedAnimationTask1(void* pArgs);
 void LedAnimationTask2(void* pArgs);
 void LedAnimationTask3(void* pArgs);
-
 #endif /* INC_LED_TASK_H_ */
