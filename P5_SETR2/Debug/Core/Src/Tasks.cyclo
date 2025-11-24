@@ -1,0 +1,7 @@
+../Core/Src/Tasks.c:18:6:CreateSerialObjects	1
+../Core/Src/Tasks.c:28:6:QueueLed	1
+../Core/Src/Tasks.c:33:14:GetSensors	1
+../Core/Src/Tasks.c:41:6:CreateTasks	1
+../Core/Src/Tasks.c:71:6:TaskSensors	1
+../Core/Src/Tasks.c:82:6:TaskWebServer	1
+../Core/Src/Tasks.c:87:6:TaskLed	1

@@ -1,0 +1,7 @@
+../Core/Src/serial_task.c:20:6:CreateSerialObjects	1
+../Core/Src/serial_task.c:27:6:CreateSerialTask	1
+../Core/Src/serial_task.c:48:6:SerialTxTask	1
+../Core/Src/serial_task.c:62:6:SerialRxTask	1
+../Core/Src/serial_task.c:76:6:SerialSendByte	2
+../Core/Src/serial_task.c:83:6:HAL_UART_TxCpltCallback	2
+../Core/Src/serial_task.c:91:6:HAL_UART_RxCpltCallback	2

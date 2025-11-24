@@ -295,7 +295,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x96 ./BSP/stm32l475e_iot01_qspi.o
  .debug_line    0x00000000      0x993 ./BSP/stm32l475e_iot01_qspi.o
- .debug_str     0x00000000      0xc20 ./BSP/stm32l475e_iot01_qspi.o
+ .debug_str     0x00000000      0xc13 ./BSP/stm32l475e_iot01_qspi.o
  .comment       0x00000000       0x44 ./BSP/stm32l475e_iot01_qspi.o
  .debug_frame   0x00000000      0x300 ./BSP/stm32l475e_iot01_qspi.o
  .ARM.attributes
@@ -347,7 +347,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x5e ./Components/cs42l51/cs42l51.o
  .debug_line    0x00000000      0x65c ./Components/cs42l51/cs42l51.o
- .debug_str     0x00000000      0x3fa ./Components/cs42l51/cs42l51.o
+ .debug_str     0x00000000      0x3ed ./Components/cs42l51/cs42l51.o
  .comment       0x00000000       0x44 ./Components/cs42l51/cs42l51.o
  .debug_frame   0x00000000      0x1e8 ./Components/cs42l51/cs42l51.o
  .ARM.attributes
@@ -394,7 +394,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x5f ./Components/cs43l22/cs43l22.o
  .debug_line    0x00000000      0x659 ./Components/cs43l22/cs43l22.o
- .debug_str     0x00000000      0x3ea ./Components/cs43l22/cs43l22.o
+ .debug_str     0x00000000      0x3dd ./Components/cs43l22/cs43l22.o
  .comment       0x00000000       0x44 ./Components/cs43l22/cs43l22.o
  .debug_frame   0x00000000      0x1e4 ./Components/cs43l22/cs43l22.o
  .ARM.attributes
@@ -444,7 +444,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x67 ./Components/cy8c4014lqi/cy8c4014lqi.o
  .debug_line    0x00000000      0x35f ./Components/cy8c4014lqi/cy8c4014lqi.o
- .debug_str     0x00000000      0x48c ./Components/cy8c4014lqi/cy8c4014lqi.o
+ .debug_str     0x00000000      0x47f ./Components/cy8c4014lqi/cy8c4014lqi.o
  .comment       0x00000000       0x44 ./Components/cy8c4014lqi/cy8c4014lqi.o
  .debug_frame   0x00000000      0x248 ./Components/cy8c4014lqi/cy8c4014lqi.o
  .ARM.attributes
@@ -495,7 +495,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x6e ./Components/ft3x67/ft3x67.o
  .debug_line    0x00000000      0x416 ./Components/ft3x67/ft3x67.o
- .debug_str     0x00000000      0x48e ./Components/ft3x67/ft3x67.o
+ .debug_str     0x00000000      0x481 ./Components/ft3x67/ft3x67.o
  .comment       0x00000000       0x44 ./Components/ft3x67/ft3x67.o
  .debug_frame   0x00000000      0x250 ./Components/ft3x67/ft3x67.o
  .ARM.attributes
@@ -545,7 +545,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x69 ./Components/ft5336/ft5336.o
  .debug_line    0x00000000      0x503 ./Components/ft5336/ft5336.o
- .debug_str     0x00000000      0x4d6 ./Components/ft5336/ft5336.o
+ .debug_str     0x00000000      0x4c9 ./Components/ft5336/ft5336.o
  .comment       0x00000000       0x44 ./Components/ft5336/ft5336.o
  .debug_frame   0x00000000      0x230 ./Components/ft5336/ft5336.o
  .ARM.attributes
@@ -589,7 +589,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x56 ./Components/ft6x06/ft6x06.o
  .debug_line    0x00000000      0x39d ./Components/ft6x06/ft6x06.o
- .debug_str     0x00000000      0x3ea ./Components/ft6x06/ft6x06.o
+ .debug_str     0x00000000      0x3dd ./Components/ft6x06/ft6x06.o
  .comment       0x00000000       0x44 ./Components/ft6x06/ft6x06.o
  .debug_frame   0x00000000      0x1d4 ./Components/ft6x06/ft6x06.o
  .ARM.attributes
@@ -642,7 +642,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x6a ./Components/hx8347g/hx8347g.o
  .debug_line    0x00000000      0x465 ./Components/hx8347g/hx8347g.o
- .debug_str     0x00000000      0x46e ./Components/hx8347g/hx8347g.o
+ .debug_str     0x00000000      0x461 ./Components/hx8347g/hx8347g.o
  .comment       0x00000000       0x44 ./Components/hx8347g/hx8347g.o
  .debug_frame   0x00000000      0x214 ./Components/hx8347g/hx8347g.o
  .ARM.attributes
@@ -692,7 +692,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x6a ./Components/hx8347i/hx8347i.o
  .debug_line    0x00000000      0x46a ./Components/hx8347i/hx8347i.o
- .debug_str     0x00000000      0x46e ./Components/hx8347i/hx8347i.o
+ .debug_str     0x00000000      0x461 ./Components/hx8347i/hx8347i.o
  .comment       0x00000000       0x44 ./Components/hx8347i/hx8347i.o
  .debug_frame   0x00000000      0x214 ./Components/hx8347i/hx8347i.o
  .ARM.attributes
@@ -733,7 +733,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x57 ./Components/l3gd20/l3gd20.o
  .debug_line    0x00000000      0x421 ./Components/l3gd20/l3gd20.o
- .debug_str     0x00000000      0x3db ./Components/l3gd20/l3gd20.o
+ .debug_str     0x00000000      0x3ce ./Components/l3gd20/l3gd20.o
  .comment       0x00000000       0x44 ./Components/l3gd20/l3gd20.o
  .debug_frame   0x00000000      0x1bc ./Components/l3gd20/l3gd20.o
  .ARM.attributes
@@ -806,7 +806,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x7f ./Components/ls016b8uy/ls016b8uy.o
  .debug_line    0x00000000      0x6a3 ./Components/ls016b8uy/ls016b8uy.o
- .debug_str     0x00000000      0x593 ./Components/ls016b8uy/ls016b8uy.o
+ .debug_str     0x00000000      0x586 ./Components/ls016b8uy/ls016b8uy.o
  .comment       0x00000000       0x44 ./Components/ls016b8uy/ls016b8uy.o
  .debug_frame   0x00000000      0x28c ./Components/ls016b8uy/ls016b8uy.o
  .ARM.attributes
@@ -849,7 +849,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x57 ./Components/lsm303c/lsm303c.o
  .debug_line    0x00000000      0x4b7 ./Components/lsm303c/lsm303c.o
- .debug_str     0x00000000      0x487 ./Components/lsm303c/lsm303c.o
+ .debug_str     0x00000000      0x47a ./Components/lsm303c/lsm303c.o
  .comment       0x00000000       0x44 ./Components/lsm303c/lsm303c.o
  .debug_frame   0x00000000      0x1a8 ./Components/lsm303c/lsm303c.o
  .ARM.attributes
@@ -904,7 +904,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x80 ./Components/lsm303dlhc/lsm303dlhc.o
  .debug_line    0x00000000      0x581 ./Components/lsm303dlhc/lsm303dlhc.o
- .debug_str     0x00000000      0x588 ./Components/lsm303dlhc/lsm303dlhc.o
+ .debug_str     0x00000000      0x57b ./Components/lsm303dlhc/lsm303dlhc.o
  .comment       0x00000000       0x44 ./Components/lsm303dlhc/lsm303dlhc.o
  .debug_frame   0x00000000      0x2b0 ./Components/lsm303dlhc/lsm303dlhc.o
  .ARM.attributes
@@ -997,7 +997,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xdd ./Components/m24sr/m24sr.o
  .debug_line    0x00000000      0xd4d ./Components/m24sr/m24sr.o
- .debug_str     0x00000000      0x7a6 ./Components/m24sr/m24sr.o
+ .debug_str     0x00000000      0x799 ./Components/m24sr/m24sr.o
  .comment       0x00000000       0x44 ./Components/m24sr/m24sr.o
  .debug_frame   0x00000000      0x4c0 ./Components/m24sr/m24sr.o
  .ARM.attributes
@@ -1130,7 +1130,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x15c ./Components/mfxstm32l152/mfxstm32l152.o
  .debug_line    0x00000000      0xb84 ./Components/mfxstm32l152/mfxstm32l152.o
- .debug_str     0x00000000      0xd7e ./Components/mfxstm32l152/mfxstm32l152.o
+ .debug_str     0x00000000      0xd71 ./Components/mfxstm32l152/mfxstm32l152.o
  .comment       0x00000000       0x44 ./Components/mfxstm32l152/mfxstm32l152.o
  .debug_frame   0x00000000      0x7e8 ./Components/mfxstm32l152/mfxstm32l152.o
  .ARM.attributes
@@ -1161,7 +1161,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x28 ./Components/ov9655/ov9655.o
  .debug_line    0x00000000      0x397 ./Components/ov9655/ov9655.o
- .debug_str     0x00000000      0x32a ./Components/ov9655/ov9655.o
+ .debug_str     0x00000000      0x31d ./Components/ov9655/ov9655.o
  .comment       0x00000000       0x44 ./Components/ov9655/ov9655.o
  .debug_frame   0x00000000       0xa4 ./Components/ov9655/ov9655.o
  .ARM.attributes
@@ -1336,7 +1336,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x1f5 ./Components/st25dv/st25dv.o
  .debug_line    0x00000000     0x106e ./Components/st25dv/st25dv.o
- .debug_str     0x00000000     0x1808 ./Components/st25dv/st25dv.o
+ .debug_str     0x00000000     0x17fb ./Components/st25dv/st25dv.o
  .comment       0x00000000       0x44 ./Components/st25dv/st25dv.o
  .debug_frame   0x00000000      0xb54 ./Components/st25dv/st25dv.o
  .ARM.attributes
@@ -1639,7 +1639,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x36d ./Components/st25dv/st25dv_reg.o
  .debug_line    0x00000000     0x1e2b ./Components/st25dv/st25dv_reg.o
- .debug_str     0x00000000     0x1057 ./Components/st25dv/st25dv_reg.o
+ .debug_str     0x00000000     0x104a ./Components/st25dv/st25dv_reg.o
  .comment       0x00000000       0x44 ./Components/st25dv/st25dv_reg.o
  .debug_frame   0x00000000     0x1458 ./Components/st25dv/st25dv_reg.o
  .ARM.attributes
@@ -1681,7 +1681,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x58 ./Components/st7735/st7735.o
  .debug_line    0x00000000      0x4a2 ./Components/st7735/st7735.o
- .debug_str     0x00000000      0x40c ./Components/st7735/st7735.o
+ .debug_str     0x00000000      0x3ff ./Components/st7735/st7735.o
  .comment       0x00000000       0x44 ./Components/st7735/st7735.o
  .debug_frame   0x00000000      0x1c8 ./Components/st7735/st7735.o
  .ARM.attributes
@@ -1744,7 +1744,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x84 ./Components/st7789h2/st7789h2.o
  .debug_line    0x00000000      0x644 ./Components/st7789h2/st7789h2.o
- .debug_str     0x00000000      0x588 ./Components/st7789h2/st7789h2.o
+ .debug_str     0x00000000      0x57b ./Components/st7789h2/st7789h2.o
  .comment       0x00000000       0x44 ./Components/st7789h2/st7789h2.o
  .debug_frame   0x00000000      0x2b8 ./Components/st7789h2/st7789h2.o
  .ARM.attributes
@@ -1802,7 +1802,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x82 ./Components/stmpe1600/stmpe1600.o
  .debug_line    0x00000000      0x511 ./Components/stmpe1600/stmpe1600.o
- .debug_str     0x00000000      0x6bc ./Components/stmpe1600/stmpe1600.o
+ .debug_str     0x00000000      0x6af ./Components/stmpe1600/stmpe1600.o
  .comment       0x00000000       0x44 ./Components/stmpe1600/stmpe1600.o
  .debug_frame   0x00000000      0x2c4 ./Components/stmpe1600/stmpe1600.o
  .ARM.attributes
@@ -1890,7 +1890,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xdc ./Components/stmpe811/stmpe811.o
  .debug_line    0x00000000      0x6f2 ./Components/stmpe811/stmpe811.o
- .debug_str     0x00000000      0x831 ./Components/stmpe811/stmpe811.o
+ .debug_str     0x00000000      0x824 ./Components/stmpe811/stmpe811.o
  .comment       0x00000000       0x44 ./Components/stmpe811/stmpe811.o
  .debug_frame   0x00000000      0x4e0 ./Components/stmpe811/stmpe811.o
  .ARM.attributes
@@ -1939,7 +1939,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x61 ./Components/wm8994/wm8994.o
  .debug_line    0x00000000      0xfe1 ./Components/wm8994/wm8994.o
- .debug_str     0x00000000      0x422 ./Components/wm8994/wm8994.o
+ .debug_str     0x00000000      0x415 ./Components/wm8994/wm8994.o
  .comment       0x00000000       0x44 ./Components/wm8994/wm8994.o
  .debug_frame   0x00000000      0x1e8 ./Components/wm8994/wm8994.o
  .ARM.attributes
@@ -2296,7 +2296,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x64 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
  .debug_line    0x00000000      0x852 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
- .debug_str     0x00000000      0x654 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
+ .debug_str     0x00000000      0x647 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
  .debug_frame   0x00000000      0x204 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
  .ARM.attributes
@@ -2309,7 +2309,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o
  .debug_line    0x00000000       0x5b ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o
- .debug_str     0x00000000      0x1c4 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o
+ .debug_str     0x00000000      0x1b7 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o
  .ARM.attributes
                 0x00000000       0x34 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o
@@ -2341,7 +2341,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x46 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o
  .debug_line    0x00000000      0x5d6 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o
- .debug_str     0x00000000      0x473 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o
+ .debug_str     0x00000000      0x466 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o
  .debug_frame   0x00000000      0x174 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o
  .ARM.attributes
@@ -2385,7 +2385,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x65 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
  .debug_line    0x00000000      0x63d ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
- .debug_str     0x00000000      0x676 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
+ .debug_str     0x00000000      0x669 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
  .debug_frame   0x00000000      0x204 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o
  .ARM.attributes
@@ -2430,7 +2430,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x71 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
  .debug_line    0x00000000      0x88d ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
- .debug_str     0x00000000      0x6f4 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
+ .debug_str     0x00000000      0x6e7 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
  .debug_frame   0x00000000      0x248 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o
  .ARM.attributes
@@ -2446,7 +2446,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x19 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o
  .debug_line    0x00000000      0x26d ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o
- .debug_str     0x00000000      0x2d6 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o
+ .debug_str     0x00000000      0x2c9 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o
  .debug_frame   0x00000000       0x50 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o
  .ARM.attributes
@@ -3072,7 +3072,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x13 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o
  .debug_line    0x00000000      0x2b2 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o
- .debug_str     0x00000000      0x626 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o
+ .debug_str     0x00000000      0x619 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o
  .debug_frame   0x00000000       0x38 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o
  .ARM.attributes
@@ -3234,7 +3234,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x60 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o
  .debug_line    0x00000000      0x779 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o
- .debug_str     0x00000000      0x96e ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o
+ .debug_str     0x00000000      0x961 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o
  .comment       0x00000000       0x44 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o
  .debug_frame   0x00000000      0x204 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o
  .ARM.attributes
@@ -5322,48 +5322,48 @@ LOAD /opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_line    0x00011cce     0x291c ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
  .debug_line    0x000145ea     0x15f2 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
 
-.debug_str      0x00000000     0x7ba7
- .debug_str     0x00000000     0x7ba7 ./BSP/stm32l475e_iot01.o
-                               0x14cb (size before relaxing)
- .debug_str     0x00007ba7      0x3d7 ./BSP/stm32l475e_iot01_accelero.o
- .debug_str     0x00007ba7      0x360 ./BSP/stm32l475e_iot01_gyro.o
- .debug_str     0x00007ba7      0x286 ./BSP/stm32l475e_iot01_hsensor.o
- .debug_str     0x00007ba7      0x376 ./BSP/stm32l475e_iot01_magneto.o
- .debug_str     0x00007ba7      0x287 ./BSP/stm32l475e_iot01_psensor.o
- .debug_str     0x00007ba7      0x310 ./BSP/stm32l475e_iot01_tsensor.o
- .debug_str     0x00007ba7      0x418 ./Components/hts221/hts221.o
- .debug_str     0x00007ba7      0x397 ./Components/lis3mdl/lis3mdl.o
- .debug_str     0x00007ba7      0x3cc ./Components/lps22hb/lps22hb.o
- .debug_str     0x00007ba7      0x3dd ./Components/lsm6dsl/lsm6dsl.o
- .debug_str     0x00007ba7      0x260 ./Core/Src/accelerometer.o
- .debug_str     0x00007ba7      0x20a ./Core/Src/gyroscope.o
- .debug_str     0x00007ba7      0x20d ./Core/Src/humidity.o
- .debug_str     0x00007ba7      0x250 ./Core/Src/magnetic.o
- .debug_str     0x00007ba7     0x1c9a ./Core/Src/main.o
- .debug_str     0x00007ba7      0x166 ./Core/Src/pressure.o
- .debug_str     0x00007ba7     0x17ab ./Core/Src/stm32l4xx_hal_msp.o
- .debug_str     0x00007ba7      0x295 ./Core/Src/stm32l4xx_it.o
- .debug_str     0x00007ba7      0x40a ./Core/Src/syscalls.o
- .debug_str     0x00007ba7      0x236 ./Core/Src/sysmem.o
- .debug_str     0x00007ba7      0x3ea ./Core/Src/system_stm32l4xx.o
- .debug_str     0x00007ba7      0x20b ./Core/Src/temperature.o
- .debug_str     0x00007ba7       0x7b ./Core/Startup/startup_stm32l475vgtx.o
- .debug_str     0x00007ba7      0xd00 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
- .debug_str     0x00007ba7      0xc5a ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
- .debug_str     0x00007ba7     0x1270 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
- .debug_str     0x00007ba7      0x551 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
- .debug_str     0x00007ba7      0xfea ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
- .debug_str     0x00007ba7      0x8f7 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
- .debug_str     0x00007ba7      0xe1d ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
- .debug_str     0x00007ba7      0x839 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
- .debug_str     0x00007ba7      0x6bf ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
- .debug_str     0x00007ba7      0x825 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
- .debug_str     0x00007ba7      0xb4a ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
- .debug_str     0x00007ba7      0x8ad ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
- .debug_str     0x00007ba7      0xacc ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
- .debug_str     0x00007ba7      0xbec ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
- .debug_str     0x00007ba7     0x1014 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
- .debug_str     0x00007ba7      0xd43 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
+.debug_str      0x00000000     0x7b9a
+ .debug_str     0x00000000     0x7b9a ./BSP/stm32l475e_iot01.o
+                               0x14be (size before relaxing)
+ .debug_str     0x00007b9a      0x3ca ./BSP/stm32l475e_iot01_accelero.o
+ .debug_str     0x00007b9a      0x353 ./BSP/stm32l475e_iot01_gyro.o
+ .debug_str     0x00007b9a      0x279 ./BSP/stm32l475e_iot01_hsensor.o
+ .debug_str     0x00007b9a      0x369 ./BSP/stm32l475e_iot01_magneto.o
+ .debug_str     0x00007b9a      0x27a ./BSP/stm32l475e_iot01_psensor.o
+ .debug_str     0x00007b9a      0x303 ./BSP/stm32l475e_iot01_tsensor.o
+ .debug_str     0x00007b9a      0x40b ./Components/hts221/hts221.o
+ .debug_str     0x00007b9a      0x38a ./Components/lis3mdl/lis3mdl.o
+ .debug_str     0x00007b9a      0x3bf ./Components/lps22hb/lps22hb.o
+ .debug_str     0x00007b9a      0x3d0 ./Components/lsm6dsl/lsm6dsl.o
+ .debug_str     0x00007b9a      0x253 ./Core/Src/accelerometer.o
+ .debug_str     0x00007b9a      0x1fd ./Core/Src/gyroscope.o
+ .debug_str     0x00007b9a      0x200 ./Core/Src/humidity.o
+ .debug_str     0x00007b9a      0x243 ./Core/Src/magnetic.o
+ .debug_str     0x00007b9a     0x1c8d ./Core/Src/main.o
+ .debug_str     0x00007b9a      0x159 ./Core/Src/pressure.o
+ .debug_str     0x00007b9a     0x179e ./Core/Src/stm32l4xx_hal_msp.o
+ .debug_str     0x00007b9a      0x288 ./Core/Src/stm32l4xx_it.o
+ .debug_str     0x00007b9a      0x3fd ./Core/Src/syscalls.o
+ .debug_str     0x00007b9a      0x229 ./Core/Src/sysmem.o
+ .debug_str     0x00007b9a      0x3dd ./Core/Src/system_stm32l4xx.o
+ .debug_str     0x00007b9a      0x1fe ./Core/Src/temperature.o
+ .debug_str     0x00007b9a       0x6e ./Core/Startup/startup_stm32l475vgtx.o
+ .debug_str     0x00007b9a      0xcf3 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
+ .debug_str     0x00007b9a      0xc4d ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
+ .debug_str     0x00007b9a     0x1263 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
+ .debug_str     0x00007b9a      0x544 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
+ .debug_str     0x00007b9a      0xfdd ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
+ .debug_str     0x00007b9a      0x8ea ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
+ .debug_str     0x00007b9a      0xe10 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
+ .debug_str     0x00007b9a      0x82c ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
+ .debug_str     0x00007b9a      0x6b2 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
+ .debug_str     0x00007b9a      0x818 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
+ .debug_str     0x00007b9a      0xb3d ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
+ .debug_str     0x00007b9a      0x8a0 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
+ .debug_str     0x00007b9a      0xabf ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
+ .debug_str     0x00007b9a      0xbdf ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
+ .debug_str     0x00007b9a     0x1007 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
+ .debug_str     0x00007b9a      0xd36 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./BSP/stm32l475e_iot01.o
@@ -5497,6 +5497,6 @@ LOAD /opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_frame   0x00007c10       0x34 /opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
 
 .debug_line_str
-                0x00000000       0x5f
+                0x00000000       0x52
  .debug_line_str
-                0x00000000       0x5f ./Core/Startup/startup_stm32l475vgtx.o
+                0x00000000       0x52 ./Core/Startup/startup_stm32l475vgtx.o
