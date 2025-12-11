@@ -1,7 +1,7 @@
 LibWIFI/Src/es_wifi_io.o: ../LibWIFI/Src/es_wifi_io.c \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_io.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -39,10 +39,10 @@ LibWIFI/Src/es_wifi_io.o: ../LibWIFI/Src/es_wifi_io.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_io.h:
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
@@ -80,4 +80,4 @@ LibWIFI/Src/es_wifi_io.o: ../LibWIFI/Src/es_wifi_io.c \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:

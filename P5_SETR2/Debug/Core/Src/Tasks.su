@@ -2,6 +2,6 @@
 ../Core/Src/Tasks.c:28:6:QueueLed	16	static
 ../Core/Src/Tasks.c:33:14:GetSensors	64	static
 ../Core/Src/Tasks.c:41:6:CreateTasks	16	static
-../Core/Src/Tasks.c:71:6:TaskSensors	16	static
-../Core/Src/Tasks.c:82:6:TaskWebServer	16	static
-../Core/Src/Tasks.c:87:6:TaskLed	24	static
+../Core/Src/Tasks.c:71:6:TaskSensors	56	static
+../Core/Src/Tasks.c:84:6:TaskWebServer	16	static
+../Core/Src/Tasks.c:89:6:TaskLed	24	static

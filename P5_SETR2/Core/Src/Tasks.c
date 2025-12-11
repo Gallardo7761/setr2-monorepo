@@ -43,7 +43,7 @@ void CreateTasks()
 	xTaskCreate(
 		TaskSensors,
 		"TaskSensors",
-		128,
+		256,
 		NULL,
 		1,
 		&sensorTaskHandle
@@ -52,7 +52,7 @@ void CreateTasks()
 	xTaskCreate(
 		TaskWebServer,
 		"TaskWebServer",
-		256,
+		512,
 		NULL,
 		1,
 		NULL
@@ -70,12 +70,14 @@ void CreateTasks()
 
 void TaskSensors(void* pArg)
 {
+	SensorData_t data;
 	InitSensors();
+
 	while(1)
 	{
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-		ReadSensors();
-		xQueueSend(xQueueSensors, (SensorData_t*) pArg, portMAX_DELAY);
+		ReadSensors(&data);
+		xQueueSend(xQueueSensors, &data, portMAX_DELAY);
 	}
 }
 

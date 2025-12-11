@@ -72,11 +72,11 @@ Core/Src/WebServer.o: ../Core/Src/WebServer.c ../Core/Inc/WebServer.h \
  ../Core/Inc/../../BSP/stm32l475e_iot01_qspi.h \
  ../Core/Inc/../../BSP/../Components/mx25r6435f/mx25r6435f.h \
  ../Core/Inc/../../BSP/stm32l475e_iot01_tsensor.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/wifi.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi.h \
- /home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_io.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/wifi.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h \
+ /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h \
  ../Core/Inc/Sensors.h ../Core/Inc/Tasks.h
 ../Core/Inc/WebServer.h:
 ../Core/Inc/main.h:
@@ -153,10 +153,10 @@ Core/Src/WebServer.o: ../Core/Src/WebServer.c ../Core/Inc/WebServer.h \
 ../Core/Inc/../../BSP/stm32l475e_iot01_qspi.h:
 ../Core/Inc/../../BSP/../Components/mx25r6435f/mx25r6435f.h:
 ../Core/Inc/../../BSP/stm32l475e_iot01_tsensor.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/wifi.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi.h:
-/home/jomaa/STM32CubeIDE/workspace_1.19.0/P5_SETR2/LibWIFI/Inc/es_wifi_io.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/wifi.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h:
+/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h:
 ../Core/Inc/Sensors.h:
 ../Core/Inc/Tasks.h:

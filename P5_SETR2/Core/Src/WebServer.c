@@ -56,7 +56,7 @@ int WifiConnect(void) {
 	if (WIFI_Connect(SSID, PASSWORD, WIFI_ECN_WPA2_PSK) == WIFI_STATUS_OK) {
 		if (WIFI_GetIP_Address(IP_Addr) == WIFI_STATUS_OK) {
 			LOG(
-					("> es-wifi module connected: got IP Address : %d.%d.%d.%d\n", IP_Addr[0], IP_Addr[1], IP_Addr[2], IP_Addr[3]));
+				("> es-wifi module connected: got IP Address : %d.%d.%d.%d\n", IP_Addr[0], IP_Addr[1], IP_Addr[2], IP_Addr[3]));
 		} else {
 			LOG((" ERROR : es-wifi module CANNOT get IP address\n"));
 			return -1;
@@ -69,9 +69,9 @@ int WifiConnect(void) {
 }
 
 int WifiServer(void) {
-	bool StopServer = false;
+	bool stop_server = false;
 
-	LOG(("\nRunning HTML Server test\n"));
+	LOG(("\nRunning HTTP Server test\n"));
 	if (WifiConnect() != 0)
 		return -1;
 
@@ -80,96 +80,115 @@ int WifiServer(void) {
 		LOG(("ERROR: Cannot start server.\n"));
 	}
 
-	LOG(
-			("Server is running and waiting for an HTTP  Client connection to %d.%d.%d.%d\n",IP_Addr[0],IP_Addr[1],IP_Addr[2],IP_Addr[3]));
+	LOG(("Server is running and waiting for an HTTP  Client connection to %d.%d.%d.%d\n",IP_Addr[0],IP_Addr[1],IP_Addr[2],IP_Addr[3]));
 
 	do {
-		uint8_t RemoteIP[4];
-		uint16_t RemotePort;
+		uint8_t remote_ip[4];
+		uint16_t remote_port;
 
 		while (WIFI_STATUS_OK
-				!= WIFI_WaitServerConnection(SOCKET, 1000, RemoteIP,
-						&RemotePort)) {
+				!= WIFI_WaitServerConnection(SOCKET, 1000, remote_ip,
+						&remote_port)) {
 			LOG(
 					("Waiting connection to  %d.%d.%d.%d\n",IP_Addr[0],IP_Addr[1],IP_Addr[2],IP_Addr[3]));
 
 		}
 
 		LOG(
-				("Client connected %d.%d.%d.%d:%d\n",RemoteIP[0],RemoteIP[1],RemoteIP[2],RemoteIP[3],RemotePort));
+				("Client connected %d.%d.%d.%d:%d\n",remote_ip[0],remote_ip[1],remote_ip[2],remote_ip[3],remote_port));
 
-		StopServer = WebServerProcess();
+		stop_server = WebServerProcess();
 
 		if (WIFI_CloseServerConnection(SOCKET) != WIFI_STATUS_OK) {
 			LOG(("ERROR: failed to close current Server connection\n"));
 			return -1;
 		}
-	} while (StopServer == false);
+	} while (stop_server == false);
 
 	if (WIFI_STATUS_OK != WIFI_StopServer(SOCKET)) {
 		LOG(("ERROR: Cannot stop server.\n"));
 	}
 
-	LOG(("Server is stop\n"));
+	LOG(("Server stopped\n"));
 	return 0;
 }
 
 static bool WebServerProcess(void)
 {
-	uint8_t LedState = 1;
-	SensorData_t aux;
-	uint16_t respLen;
-	static uint8_t resp[1024];
-	bool stopserver = false;
+    uint8_t led_state = 1;
+    SensorData_t tmp; // struct temporal
+    uint16_t response_length;
+    static uint8_t response[1024];
+    bool stop_server = false;
 
-	if (WIFI_STATUS_OK
-			== WIFI_ReceiveData(SOCKET, resp, 1000, &respLen,
-					WIFI_READ_TIMEOUT)) {
-		LOG(("get %d byte from server\n",respLen));
+    if (WIFI_STATUS_OK == WIFI_ReceiveData(SOCKET, response, sizeof(response) - 1, &response_length, WIFI_READ_TIMEOUT))
+    {
+        LOG(("get %d byte from server\n", response_length));
 
-		if (respLen > 0) {
-			if (strstr((char*) resp, "GET")) /* GET: put web page */
-			{
-				aux = GetSensors(); //BSP_TSENSOR_ReadTemp();
-				if (SendWebPage(LedState, aux) != WIFI_STATUS_OK) {
-					LOG(("> ERROR : Cannot send web page\n"));
-				} else {
-					LOG(("Send page after  GET command\n"));
-				}
-			} else if (strstr((char*) resp, "POST"))/* POST: received info */
-			{
-				LOG(("Post request\n"));
+        if (response_length > 0)
+        {
+            if (response_length < sizeof(response))
+                response[response_length] = '\0';
+            else
+                response[sizeof(response) - 1] = '\0';
 
-				if (strstr((char*) resp, "radio")) {
-					if (strstr((char*) resp, "radio=0")) {
-						LedState = 0;
-						QueueLed(LedState);
-					} else if (strstr((char*) resp, "radio=1")) {
-						LedState = 1;
-						QueueLed(LedState);
-					}
-					aux = GetSensors(); //BSP_TSENSOR_ReadTemp();
-				}
-				if (strstr((char*) resp, "stop_server")) {
-					if (strstr((char*) resp, "stop_server=0")) {
-						stopserver = false;
-					} else if (strstr((char*) resp, "stop_server=1")) {
-						stopserver = true;
-					}
-				}
-				aux = GetSensors(); //BSP_TSENSOR_ReadTemp();
-				if (SendWebPage(LedState, aux) != WIFI_STATUS_OK) {
-					LOG(("> ERROR : Cannot send web page\n"));
-				} else {
-					LOG(("Send Page after POST command\n"));
-				}
-			}
-		}
-	} else {
-		LOG(("Client close connection\n"));
-	}
-	return stopserver;
+            char method[8] = {0};
+            char path[64] = {0};
 
+            sscanf((char*)response, "%7s %63s", method, path);
+
+            LOG(("Request: method=%s path=%s\n", method, path));
+
+            // --- GET ----------------------------------------
+            if (strcmp(method, "GET") == 0)
+            {
+                tmp = GetSensors();
+                if (SendJsonResponse(&tmp) != WIFI_STATUS_OK) {
+                    LOG(("> ERROR : Cannot send JSON\n"));
+                } else {
+                    LOG(("Send JSON after GET\n"));
+                }
+            }
+
+            // --- POST ----------------------------------------
+            else if (strcmp(method, "POST") == 0)
+            {
+                if (strstr((char*)response, "radio")) {
+                    if (strstr((char*)response, "radio=0")) {
+                        led_state = 0;
+                        QueueLed(led_state);
+                    } else if (strstr((char*)response, "radio=1")) {
+                        led_state = 1;
+                        QueueLed(led_state);
+                    }
+                }
+
+                if (strstr((char*)response, "stop_server")) {
+                    if (strstr((char*)response, "stop_server=0"))
+                        stop_server = false;
+                    else if (strstr((char*)response, "stop_server=1"))
+                        stop_server = true;
+                }
+
+                tmp = GetSensors();
+
+                if (SendJsonResponse(&tmp) != WIFI_STATUS_OK) {
+                    LOG(("> ERROR : Cannot send JSON after POST\n"));
+                } else {
+                    LOG(("Send JSON after POST\n"));
+                }
+            }
+
+            // --- INVALID METHOD ----------------------------------------
+            else {
+                LOG(("Unsupported method: %s\n", method));
+            }
+        }
+    } else {
+        LOG(("Client close connection or receive timeout\n"));
+    }
+
+    return stop_server;
 }
 
 /**
@@ -177,50 +196,73 @@ static bool WebServerProcess(void)
  * @param  None
  * @retval None
  */
-static WIFI_Status_t SendWebPage(uint8_t ledIsOn, SensorData_t payload) {
-	uint8_t temp[50];
-	uint16_t SentDataLength;
-	WIFI_Status_t ret;
+static WIFI_Status_t SendJsonResponse(SensorData_t* payload)
+{
+    uint16_t sent_data_length = 0;
+    WIFI_Status_t return_status;
 
-	/* construct web page content */
-	strcpy((char*) http,
-			(char*) "HTTP/1.0 200 OK\r\nContent-Type: text/html\r\nPragma: no-cache\r\n\r\n");
-	strcat((char*) http, (char*) "<html>\r\n<body>\r\n");
-	strcat((char*) http, (char*) "<title>STM32 Web Server</title>\r\n");
-	strcat((char*) http,
-			(char*) "<h2>InventekSys : Web Server using Es-Wifi with STM32</h2>\r\n");
-	strcat((char*) http, (char*) "<br /><hr>\r\n");
-	strcat((char*) http,
-			(char*) "<p><form method=\"POST\"><strong>Temp: <input type=\"text\" value=\"");
-	sprintf((char*) temp, "%f", payload.temperature);
-	strcat((char*) http, (char*) temp);
-	strcat((char*) http, (char*) "\"> <sup>O</sup>C");
+    char body[512];
+    int body_length = snprintf(body, sizeof(body),
+        "{"
+        "\"humidity\": %.2f,"
+        "\"temperature\": %.2f,"
+        "\"pressure\": %.2f,"
+        "\"accelerometer\": [%d, %d, %d],"
+        "\"gyroscope\": [%.2f, %.2f, %.2f],"
+        "\"magnetometer\": [%d, %d, %d]"
+        "}",
+        payload->humidity,
+        payload->temperature,
+        payload->pressure,
+        payload->accelerometer[0], payload->accelerometer[1], payload->accelerometer[2],
+        payload->gyroscope[0], payload->gyroscope[1], payload->gyroscope[2],
+        payload->magnetometer[0], payload->magnetometer[1], payload->magnetometer[2]
+    );
 
-	if (ledIsOn) {
-		strcat((char*) http,
-				(char*) "<p><input type=\"radio\" name=\"radio\" value=\"0\" >LED off");
-		strcat((char*) http,
-				(char*) "<br><input type=\"radio\" name=\"radio\" value=\"1\" checked>LED on");
-	} else {
-		strcat((char*) http,
-				(char*) "<p><input type=\"radio\" name=\"radio\" value=\"0\" checked>LED off");
-		strcat((char*) http,
-				(char*) "<br><input type=\"radio\" name=\"radio\" value=\"1\" >LED on");
-	}
+    if (body_length < 0) body_length = 0;
+    if (body_length >= (int)sizeof(body)) body_length = (int)sizeof(body) - 1;
 
-	strcat((char*) http,
-			(char*) "</strong><p><input type=\"submit\"></form></span>");
-	strcat((char*) http, (char*) "</body>\r\n</html>\r\n");
+    int header_length = snprintf((char*)http, sizeof(http),
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: application/json\r\n"
+        "Content-Length: %d\r\n"
+        "Connection: close\r\n"
+        "Pragma: no-cache\r\n"
+        "\r\n",
+		body_length
+    );
 
-	ret = WIFI_SendData(0, (uint8_t*) http, strlen((char*) http),
-			&SentDataLength, WIFI_WRITE_TIMEOUT);
+    if (header_length <= 0 || header_length >= (int)sizeof(http))
+        return WIFI_STATUS_ERROR;
 
-	if ((ret == WIFI_STATUS_OK) && (SentDataLength != strlen((char*) http))) {
-		ret = WIFI_STATUS_ERROR;
-	}
+    if ((size_t)header_length + (size_t)body_length >= sizeof(http))
+        return WIFI_STATUS_ERROR;
 
-	return ret;
+    memcpy(http + header_length, body, body_length);
+
+    size_t total_length = header_length + body_length + 2;
+
+    return_status = WIFI_SendData(
+		SOCKET,
+		(uint8_t*)http,
+		total_length,
+		&sent_data_length,
+		WIFI_WRITE_TIMEOUT
+	);
+
+    if (return_status != WIFI_STATUS_OK) {
+        LOG(("WIFI_SendData return_status != OK (%d)\n", (int)return_status));
+        return return_status;
+    }
+
+    if (sent_data_length != (uint16_t)total_length) {
+        LOG(("WIFI_SendData sent %u of %u\n", sent_data_length, (unsigned)total_length));
+        return WIFI_STATUS_ERROR;
+    }
+
+    return WIFI_STATUS_OK;
 }
+
 
 //*************************************************************************//
 

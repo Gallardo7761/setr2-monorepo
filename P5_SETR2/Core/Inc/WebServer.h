@@ -18,7 +18,7 @@
 #include "Tasks.h"
 
 int WifiServer(void);
-static WIFI_Status_t SendWebPage(uint8_t ledIsOn, SensorData_t payload);
+static WIFI_Status_t SendJsonResponse(SensorData_t* payload);
 static int WifiStart(void);
 static int WifiConnect(void);
 static bool WebServerProcess(void);

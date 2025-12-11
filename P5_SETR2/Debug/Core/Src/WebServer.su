@@ -1,8 +1,8 @@
 ../Core/Src/WebServer.c:32:12:WifiStart	40	static
 ../Core/Src/WebServer.c:51:5:WifiConnect	16	static
 ../Core/Src/WebServer.c:71:5:WifiServer	40	static
-../Core/Src/WebServer.c:117:13:WebServerProcess	144	static
-../Core/Src/WebServer.c:180:22:SendWebPage	96	static
-../Core/Src/WebServer.c:245:6:EXTI1_IRQHandler	8	static
-../Core/Src/WebServer.c:255:6:HAL_GPIO_EXTI_Callback	16	static
-../Core/Src/WebServer.c:274:6:SPI3_IRQHandler	8	static
+../Core/Src/WebServer.c:116:13:WebServerProcess	184	static
+../Core/Src/WebServer.c:199:22:SendJsonResponse	688	static
+../Core/Src/WebServer.c:287:6:EXTI1_IRQHandler	8	static
+../Core/Src/WebServer.c:297:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/WebServer.c:316:6:SPI3_IRQHandler	8	static

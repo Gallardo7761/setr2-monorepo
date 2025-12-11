@@ -7,7 +7,6 @@
 #include "Sensors.h"
 
 TickType_t sensor_period = 100;
-SensorData_t sensor_data;
 extern QueueHandle_t xQueueSensors;
 
 void InitSensors()
@@ -21,13 +20,13 @@ void InitSensors()
 	BSP_MAGNETO_Init();
 }
 
-void ReadSensors()
+void ReadSensors(SensorData_t* sensor_data)
 {
-	sensor_data.humidity = BSP_HSENSOR_ReadHumidity();
-	sensor_data.pressure = BSP_PSENSOR_ReadPressure();
-	sensor_data.temperature = BSP_TSENSOR_ReadTemp();
+	sensor_data->humidity = BSP_HSENSOR_ReadHumidity();
+	sensor_data->pressure = BSP_PSENSOR_ReadPressure();
+	sensor_data->temperature = BSP_TSENSOR_ReadTemp();
 
-	BSP_ACCELERO_AccGetXYZ(sensor_data.accelerometer);
-	BSP_GYRO_GetXYZ(sensor_data.gyroscope);
-	BSP_MAGNETO_GetXYZ(sensor_data.magnetometer);
+	BSP_ACCELERO_AccGetXYZ(sensor_data->accelerometer);
+	BSP_GYRO_GetXYZ(sensor_data->gyroscope);
+	BSP_MAGNETO_GetXYZ(sensor_data->magnetometer);
 }
