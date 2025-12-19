@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000302c4  00000000  00000000  00055c8a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00035512  00000000  00000000  00085f4e  2**0
+ 17 .debug_line   000354ea  00000000  00000000  00085f4e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00112e77  00000000  00000000  000bb460  2**0
+ 18 .debug_str    00112e35  00000000  00000000  000bb438  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  001ce2d7  2**0
+ 19 .comment      00000043  00000000  00000000  001ce26d  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000d628  00000000  00000000  001ce31c  2**2
+ 20 .debug_frame  0000d628  00000000  00000000  001ce2b0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000061  00000000  00000000  001db944  2**0
+ 21 .debug_line_str 00000056  00000000  00000000  001db8d8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4785,11 +4785,10 @@ int WifiServer(void) {
 		uint8_t remote_ip[4];
 		uint16_t remote_port;
 
-		while (WIFI_STATUS_OK
+		while (WIFI_STATUS_OK !=
  8002468:	e00f      	b.n	800248a <WifiServer+0x7e>
-				!= WIFI_WaitServerConnection(SOCKET, 1000, remote_ip,
-						&remote_port)) {
-			LOG(
+				WIFI_WaitServerConnection(SOCKET, 1000, remote_ip, &remote_port)) {
+			LOG(("Waiting connection to  %d.%d.%d.%d\n",IP_Addr[0],
  800246a:	4b2b      	ldr	r3, [pc, #172]	@ (8002518 <WifiServer+0x10c>)
  800246c:	781b      	ldrb	r3, [r3, #0]
  800246e:	4619      	mov	r1, r3
@@ -4805,20 +4804,20 @@ int WifiServer(void) {
  8002482:	4603      	mov	r3, r0
  8002484:	4826      	ldr	r0, [pc, #152]	@ (8002520 <WifiServer+0x114>)
  8002486:	f00d fe55 	bl	8010134 <iprintf>
-				!= WIFI_WaitServerConnection(SOCKET, 1000, remote_ip,
+				WIFI_WaitServerConnection(SOCKET, 1000, remote_ip, &remote_port)) {
  800248a:	1dbb      	adds	r3, r7, #6
  800248c:	f107 0208 	add.w	r2, r7, #8
  8002490:	f44f 717a 	mov.w	r1, #1000	@ 0x3e8
  8002494:	2000      	movs	r0, #0
  8002496:	f009 fd97 	bl	800bfc8 <WIFI_WaitServerConnection>
  800249a:	4603      	mov	r3, r0
+		while (WIFI_STATUS_OK !=
  800249c:	2b00      	cmp	r3, #0
  800249e:	d1e4      	bne.n	800246a <WifiServer+0x5e>
-					("Waiting connection to  %d.%d.%d.%d\n",IP_Addr[0],IP_Addr[1],IP_Addr[2],IP_Addr[3]));
-
+					IP_Addr[1],IP_Addr[2],IP_Addr[3]));
 		}
 
-		LOG(
+		LOG(("Client connected %d.%d.%d.%d:%d\n",remote_ip[0],remote_ip[1],remote_ip[2],remote_ip[3],remote_port));
  80024a0:	7a3b      	ldrb	r3, [r7, #8]
  80024a2:	4619      	mov	r1, r3
  80024a4:	7a7b      	ldrb	r3, [r7, #9]
@@ -4833,7 +4832,6 @@ int WifiServer(void) {
  80024b6:	4602      	mov	r2, r0
  80024b8:	481a      	ldr	r0, [pc, #104]	@ (8002524 <WifiServer+0x118>)
  80024ba:	f00d fe3b 	bl	8010134 <iprintf>
-				("Client connected %d.%d.%d.%d:%d\n",remote_ip[0],remote_ip[1],remote_ip[2],remote_ip[3],remote_port));
 
 		stop_server = WebServerProcess();
  80024be:	f000 f839 	bl	8002534 <WebServerProcess>
@@ -8706,48 +8704,108 @@ void SystemInit(void)
  8003ba8:	e000ed00 	.word	0xe000ed00
 
 08003bac <Reset_Handler>:
+
+    .section	.text.Reset_Handler
+	.weak	Reset_Handler
+	.type	Reset_Handler, %function
+Reset_Handler:
+  ldr   sp, =_estack    /* Set stack pointer */
  8003bac:	f8df d034 	ldr.w	sp, [pc, #52]	@ 8003be4 <LoopForever+0x2>
+
+/* Call the clock system initialization function.*/
+    bl  SystemInit
  8003bb0:	f7ff ffea 	bl	8003b88 <SystemInit>
+
+/* Copy the data segment initializers from flash to SRAM */
+  ldr r0, =_sdata
  8003bb4:	480c      	ldr	r0, [pc, #48]	@ (8003be8 <LoopForever+0x6>)
+  ldr r1, =_edata
  8003bb6:	490d      	ldr	r1, [pc, #52]	@ (8003bec <LoopForever+0xa>)
+  ldr r2, =_sidata
  8003bb8:	4a0d      	ldr	r2, [pc, #52]	@ (8003bf0 <LoopForever+0xe>)
+  movs r3, #0
  8003bba:	2300      	movs	r3, #0
+  b LoopCopyDataInit
  8003bbc:	e002      	b.n	8003bc4 <LoopCopyDataInit>
 
 08003bbe <CopyDataInit>:
+
+CopyDataInit:
+  ldr r4, [r2, r3]
  8003bbe:	58d4      	ldr	r4, [r2, r3]
+  str r4, [r0, r3]
  8003bc0:	50c4      	str	r4, [r0, r3]
+  adds r3, r3, #4
  8003bc2:	3304      	adds	r3, #4
 
 08003bc4 <LoopCopyDataInit>:
+
+LoopCopyDataInit:
+  adds r4, r0, r3
  8003bc4:	18c4      	adds	r4, r0, r3
+  cmp r4, r1
  8003bc6:	428c      	cmp	r4, r1
+  bcc CopyDataInit
  8003bc8:	d3f9      	bcc.n	8003bbe <CopyDataInit>
+  
+/* Zero fill the bss segment. */
+  ldr r2, =_sbss
  8003bca:	4a0a      	ldr	r2, [pc, #40]	@ (8003bf4 <LoopForever+0x12>)
+  ldr r4, =_ebss
  8003bcc:	4c0a      	ldr	r4, [pc, #40]	@ (8003bf8 <LoopForever+0x16>)
+  movs r3, #0
  8003bce:	2300      	movs	r3, #0
+  b LoopFillZerobss
  8003bd0:	e001      	b.n	8003bd6 <LoopFillZerobss>
 
 08003bd2 <FillZerobss>:
+
+FillZerobss:
+  str  r3, [r2]
  8003bd2:	6013      	str	r3, [r2, #0]
+  adds r2, r2, #4
  8003bd4:	3204      	adds	r2, #4
 
 08003bd6 <LoopFillZerobss>:
+
+LoopFillZerobss:
+  cmp r2, r4
  8003bd6:	42a2      	cmp	r2, r4
+  bcc FillZerobss
  8003bd8:	d3fb      	bcc.n	8003bd2 <FillZerobss>
+
+/* Call static constructors */
+    bl __libc_init_array
  8003bda:	f00c fd79 	bl	80106d0 <__libc_init_array>
+/* Call the application's entry point.*/
+	bl	main
  8003bde:	f7fe ff03 	bl	80029e8 <main>
 
 08003be2 <LoopForever>:
+
+LoopForever:
+    b LoopForever
  8003be2:	e7fe      	b.n	8003be2 <LoopForever>
+  ldr   sp, =_estack    /* Set stack pointer */
  8003be4:	20018000 	.word	0x20018000
+  ldr r0, =_sdata
  8003be8:	20000000 	.word	0x20000000
+  ldr r1, =_edata
  8003bec:	2000029c 	.word	0x2000029c
+  ldr r2, =_sidata
  8003bf0:	080153b4 	.word	0x080153b4
+  ldr r2, =_sbss
  8003bf4:	2000029c 	.word	0x2000029c
+  ldr r4, =_ebss
  8003bf8:	200036b0 	.word	0x200036b0
 
 08003bfc <ADC1_2_IRQHandler>:
+ * @retval : None
+*/
+    .section	.text.Default_Handler,"ax",%progbits
+Default_Handler:
+Infinite_Loop:
+	b	Infinite_Loop
  8003bfc:	e7fe      	b.n	8003bfc <ADC1_2_IRQHandler>
 
 08003bfe <HAL_Init>:

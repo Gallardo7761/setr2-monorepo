@@ -1,8 +1,8 @@
 LibWIFI/Src/wifi.o: ../LibWIFI/Src/wifi.c \
- /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/wifi.h \
- /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h \
- /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h \
- /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h \
+ /home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/wifi.h \
+ /home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h \
+ /home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h \
+ /home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -40,10 +40,10 @@ LibWIFI/Src/wifi.o: ../LibWIFI/Src/wifi.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
-/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/wifi.h:
-/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h:
-/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
-/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h:
+/home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/wifi.h:
+/home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi.h:
+/home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_conf.h:
+/home/jomaa/git/setr2-monorepo/P5_SETR2/LibWIFI/Inc/es_wifi_io.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:

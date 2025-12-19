@@ -1,8 +1,8 @@
 ../Core/Src/WebServer.c:32:12:WifiStart	3
 ../Core/Src/WebServer.c:51:5:WifiConnect	3
 ../Core/Src/WebServer.c:71:5:WifiServer	7
-../Core/Src/WebServer.c:116:13:WebServerProcess	14
-../Core/Src/WebServer.c:199:22:SendJsonResponse	8
-../Core/Src/WebServer.c:287:6:EXTI1_IRQHandler	1
-../Core/Src/WebServer.c:297:6:HAL_GPIO_EXTI_Callback	2
-../Core/Src/WebServer.c:316:6:SPI3_IRQHandler	1
+../Core/Src/WebServer.c:113:13:WebServerProcess	14
+../Core/Src/WebServer.c:196:22:SendJsonResponse	8
+../Core/Src/WebServer.c:284:6:EXTI1_IRQHandler	1
+../Core/Src/WebServer.c:294:6:HAL_GPIO_EXTI_Callback	2
+../Core/Src/WebServer.c:313:6:SPI3_IRQHandler	1

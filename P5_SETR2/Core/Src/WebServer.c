@@ -86,16 +86,13 @@ int WifiServer(void) {
 		uint8_t remote_ip[4];
 		uint16_t remote_port;
 
-		while (WIFI_STATUS_OK
-				!= WIFI_WaitServerConnection(SOCKET, 1000, remote_ip,
-						&remote_port)) {
-			LOG(
-					("Waiting connection to  %d.%d.%d.%d\n",IP_Addr[0],IP_Addr[1],IP_Addr[2],IP_Addr[3]));
-
+		while (WIFI_STATUS_OK !=
+				WIFI_WaitServerConnection(SOCKET, 1000, remote_ip, &remote_port)) {
+			LOG(("Waiting connection to  %d.%d.%d.%d\n",IP_Addr[0],
+					IP_Addr[1],IP_Addr[2],IP_Addr[3]));
 		}
 
-		LOG(
-				("Client connected %d.%d.%d.%d:%d\n",remote_ip[0],remote_ip[1],remote_ip[2],remote_ip[3],remote_port));
+		LOG(("Client connected %d.%d.%d.%d:%d\n",remote_ip[0],remote_ip[1],remote_ip[2],remote_ip[3],remote_port));
 
 		stop_server = WebServerProcess();
 

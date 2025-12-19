@@ -91,8 +91,8 @@ all: main-build
 main-build: P5_SETR2.elf secondary-outputs
 
 # Tool invocations
-P5_SETR2.elf P5_SETR2.map: $(OBJS) $(USER_OBJS) /home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/STM32L475VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "P5_SETR2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/jomaa/Projects/git/setr2-monorepo/P5_SETR2/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P5_SETR2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+P5_SETR2.elf P5_SETR2.map: $(OBJS) $(USER_OBJS) /home/jomaa/git/setr2-monorepo/P5_SETR2/STM32L475VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "P5_SETR2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/jomaa/git/setr2-monorepo/P5_SETR2/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P5_SETR2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
